@@ -1,0 +1,21 @@
+{% extends 'advogado/base.html' %}
+
+{% block title %}
+<title>{{ advogado.title }}</title>
+{% endblock %}
+
+{% block conteudo %}
+<div class="container">
+    <h1><b>Vídeo Espaço Kid's</b></h1>
+
+    <div class="row">
+        <h1><b>{{ video_ek.titulo }}</b></h1>
+        <div class="video">
+            <iframe width="800" height="560" src="{{ video_ek.link }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+{% include "advogado/links.html" %}
+
+{% endblock %}

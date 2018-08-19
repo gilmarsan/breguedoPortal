@@ -1,0 +1,36 @@
+{% extends "advogado/base.html" %}
+
+{% load static %}
+
+{% block conteudo %}
+
+<div id="wrapper">
+    <section id="featured">
+        <div class="container">
+            <h1 style="text-align:center; color:#D4AA00">Lista de Vídeos Disponíveis</h1>
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        {% if full_list %}
+                            {% for video in full_list %}
+                                <div class="col-lg-4 col-sm-12 col-md-6">
+                                    <div class="img-responsive">
+                                        <th> <a href="{% url 'videoview' video.id %}" title="video"><img style="float:left; text-align:justify; margin-right: 30px" src="{{ video.icon_video_url|default_if_none:'#' }}" alt="Thumb vídeo" width="180"/></a></th>
+                                    </div>
+                                    <div class="text-justify">
+                                        <th> <div class="text" style="justify-content:space-between; max-width:500px; color:#D4AA00" <h1><b>{{ video.titulo}}</b></h1> <hr> <p> {{ video.desc_video}} </p></div></th>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <h1><b>Nenhum vídeo disponível</b></h1>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% include "advogado/links.html" %}
+
+{% endblock %}

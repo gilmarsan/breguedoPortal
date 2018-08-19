@@ -1,0 +1,64 @@
+{% extends "advogado/base.html" %}
+
+{% load static %}
+
+{% block conteudo %}
+
+<div id="wrapper">
+  <section id="featured">
+        <!-- Slider -->
+    <div id="main-slider" class="flexslider">
+      <ul class="slides">
+        <li>
+          <img src="{% static 'advogado/img/slides/0.jpg' %}" alt="imagem Breguedo" />
+        </li>
+        <li>
+          <img src="{% static 'advogado/img/slides/1.jpg' %}" alt="imagem justiça" />
+        </li>
+        <li>
+          <img src="{% static 'advogado/img/slides/aj.jpg' %}" alt="imagem Artigos Jurídicos" />
+        </li>
+        <li>
+          <img src="{% static 'advogado/img/slides/2.jpg' %}" alt="imagem justiça" />
+        </li>
+              <li>
+                    <img src="{% static 'advogado/img/slides/jc.jpg' %}" alt="imagem Breguedo" />
+              </li>
+              <li>
+                    <img src="{% static 'advogado/img/slides/3.jpg' %}" alt="imagem justiça" />
+              </li>
+              <li>
+                    <img src="{% static 'advogado/img/slides/v.jpg' %}" alt="imagem Breguedo" />
+            </li>
+            <li>
+                    <img src="{% static 'advogado/img/slides/4.jpg' %}" alt="imagem Breguedo" />
+            </li>
+            <li>
+                    <img src="{% static 'advogado/img/slides/art.jpg' %}" alt="imagem Breguedo" />
+              </li>
+            <li>
+                        <img src="{% static 'advogado/img/slides/5.jpg' %}" alt="imagem Breguedo" />
+            </li>
+            <li>
+                    <img src="{% static 'advogado/img/slides/dc.jpg' %}" alt="imagem Breguedo" />
+              </li>
+            <li>
+                        <img src="{% static 'advogado/img/slides/6.jpg' %}" alt="imagem Breguedo" />
+            </li>
+            <li>
+                    <img src="{% static 'advogado/img/slides/p.jpg' %}" alt="imagem Breguedo" />
+              </li>
+      </ul>
+    </div>
+  <!-- end slider -->
+
+
+  </section>
+  <div class="content_white" style="height:160px">
+                    <h2>Bem-vindo ao portal de<b span style="color: #D4AA00">  Sidiney Breguedo</b></h2>
+                    <p>Advogado, poeta, escritor, cartunista e artista plástico.</p>
+</div>
+
+{% include "advogado/links.html" %}
+
+{% endblock %}

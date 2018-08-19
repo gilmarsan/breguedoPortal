@@ -1,0 +1,19 @@
+{% extends 'advogado/base.html' %}
+
+{% block title %}
+<title>{{ advogado.title }}</title>
+{% endblock %}
+
+{% block conteudo %}
+<div class="container">
+    <h1><b>{{ tira.titulo }}</b></h1>
+    <h2><b>{{ tira.subtitulo }}</b></h2>
+
+        <div class="img"><img style="float:left; text-align:justify; margin-right: 30px" src="{{ tira.imagem_url|default_if_none:'#' }}" alt="" width="800"/>
+        </div>
+    <hr>
+</div>
+
+{% include "advogado/links.html" %}
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "advogado/base.html" %}
+
+{% load static %}
+
+{% block conteudo %}
+
+<div id="wrapper">
+  <section id="featured">
+    <div class="container">
+      <section id="biografia">
+        <div class="row">
+          <div class="col-sm-5 col-md-5 col-lg-5">
+            <div id="main-slider" class="flexslider">
+              <ul class="slides" style="margin-top:40px">
+                <li>
+                  <img src="{%static 'advogado/img/fotos/breguedo_1.png' %}" alt="imagem Breguedo" />
+                </li>
+                <li>
+                  <img src="{% static 'advogado/img/fotos/breguedo_2.png' %}" alt="imagem Breguedo" />
+                </li>
+                <li>
+                  <img src="{% static 'advogado/img/fotos/breguedo_3.png' %}" alt="imagem Breguedo" />
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-7 col-md-7 col-lg-7">
+            <div id="descBio" class="article" style="text-align: justify;">
+                    <p><h1><b>Quem é Sidiney Breguedo?</b></h1></p>
+                    <p><h3 style="color:#fff">O advogado <b>SIDINEY DE SOUZA BREGUÊDO</b>, nasceu em Monte Azul-MG em 1972, formou-se em Direito, inscrito na OAB/DF sob o nº 40.679,
+                       apaixonado por todo tipo de conhecimento, atua em diversos ramos da ciência jurídica, tendo um especial carinho para com as áreas voltadas a proteção
+                       do indivíduo.</h3></p>
+                    <p><h3 style="color:#fff">Advogado militante de forma efetiva em importantes campos do mundo jurídico, como Direito Penal, Cível, Trabalho, Tributário, Previdenciário, Consumidor,
+                      divide o seu tempo entre os fôruns de Brasília e o serviço público, onde é analista de gestão e políticas públicas do Distrito Federal.</h3></p>
+                    <p><h3 style="color:#fff">No Direito Administrativo trabalhou durante muitos anos na Corregedoria da Saúde, onde foi presidente da 9º Comissão Permanente de Disciplina, participou
+                      do grupo de trabalho para a criação da mediação naquele órgão, foi Gerente de Investigação Preliminar e assessor da Corregedoria, responsável pela confecção
+                      de minutas de julgamento.</h3></p>
+                    <p><h3 style="color:#fff">No Direito Penal fez a defesa de diversos réus, tendo atuado em diversas varas criminais do Estado, atuando também no Tribunal do Juri.</h3></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+</div>
+
+{% include "advogado/links.html" %}
+
+{% endblock %}

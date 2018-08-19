@@ -1,0 +1,30 @@
+{% extends "advogado/base.html" %}
+
+{% load static %}
+
+{% block conteudo %}
+
+<div id="wrapper">
+  <section id="featured">
+    <div class="container">
+        <section id="biografia">
+        <div class="row-fluid">
+          <h1><b style="color: white">Lista de Artigos Disponíveis:</b></h1>
+        </div>
+          {% if artigo_list %}
+              <ol style="color:white">
+              {% for artigo in artigo_list %}
+                  <li><h1><a href="{% url 'direitocrianca_detalhe' artigo.id %}"><b>{{ artigo.artigo_titulo }}</b></a></h1></li>
+              {%endfor %}
+               </ol>
+           {% else %}
+                  <h1><b>Nenhum Artigo sobre Direito da Criança disponível.</b></h1>
+            {% endif %}
+      </section>
+    </div>
+  </section>
+</div>
+
+{% include "advogado/links.html" %}
+
+{% endblock %}

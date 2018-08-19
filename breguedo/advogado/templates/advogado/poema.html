@@ -1,0 +1,30 @@
+{% extends "advogado/base.html" %}
+
+{% load static %}
+
+{% block conteudo %}
+
+<div id="wrapper">
+  <section id="featured">
+    <div class="container">
+      <section id="biografia">
+      <div class="row-fluid">
+          <h1><b style="color: white">Lista de Poemas Disponíveis:</b></h1>
+        </div>
+          {% if poema_list %}
+              <ol style="color:white">
+              {% for poema in poema_list %}
+                  <li><h1><a href="{% url 'poema_detalhe' poema.id %}"><b>{{ poema.titulo }}- {{poema.classificacao}} </b></a></h1></li>
+              {%endfor %}
+               </ol>
+           {% else %}
+                  <h1><b>Nenhum Poema Disponível no momento!</b></h1>
+            {% endif %}
+      </section>
+    </div>
+  </section>
+</div>
+
+{% include "advogado/links.html" %}
+
+{% endblock %}

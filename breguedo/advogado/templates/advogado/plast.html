@@ -1,0 +1,30 @@
+{% extends "advogado/base.html" %}
+
+{% load static %}
+
+{% block conteudo %}
+
+<div id="wrapper">
+  <section id="featured">
+    <div class="container">
+      <section id="biografia">
+        <div class="row-fluid">
+          <h1><b style="color: white">Lista de Obras de Artes Plástica Disponíveis:</b></h1>
+        </div>
+          {% if plast_list %}
+              <ol style="color: white">
+              {% for plast in plast_list %}
+                  <li><h1><a href="{% url 'plast_detalhe' plast.id %}"><b>{{ plast.titulo }}</b></a></h1></li>
+              {%endfor %}
+               </ol>
+           {% else %}
+                  <h1><b>Nenhuma Obra de Artes Plástica disponível!</b></h1>
+            {% endif %}
+      </section>
+    </div>
+  </section>
+</div>
+
+{% include "advogado/links.html" %}
+
+{% endblock %}

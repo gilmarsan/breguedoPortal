@@ -1,0 +1,34 @@
+{% extends "advogado/base.html" %}
+
+{% load static %}
+
+{% block conteudo %}
+
+<form class="form-horizontal" style="width: 800px; margin: 0 auto; action="" method="post">
+    {% csrf_token %}
+    <div class="container">
+        <div class="row">
+            <div class="form-group">
+                <h1 span style="color: #D4AA00; text-align: left"> Entre em Contato conosco </h1>
+            </div>
+        </div>
+        <div class="form-group">
+            <h4>Nome: {{ form.nome }} </h4>
+            <h4>E-mail: {{ form.email}}</h4>
+            <h4>Endereço: {{ form.endereço}}</h4>
+            <h4>Cidade: {{ form.cidade}}</h4>
+            <h4>Estado:{{ form.estado}}</h4>
+            <h4>CEP:{{ form.cep}}</h4>
+            <h4>Telefone Residencial:{{ form.tel_residencial}}</h4>
+            <h4>Telefone Comercial:{{ form.tel_comercial}}</h4>
+            <h4>Celular:{{ form.celular}}</h4>
+            <h4>Mensagem:</h4>
+            {{ form.mensagem}}
+            <b><input type="submit" value="Enviar" /></b>
+        </div>
+    </div>
+</form>
+
+{% include "advogado/links.html" %}
+
+{% endblock %}

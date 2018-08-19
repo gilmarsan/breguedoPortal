@@ -1,0 +1,25 @@
+{% extends "advogado/base.html" %}
+
+{% load static %}
+
+{% block conteudo %}
+
+<div class="container">
+    <h1><b>Informe o conteúdo da Mensagem</b></h1>
+    <hr>
+    <form action="" method="post">{% csrf_token %}
+    {% for field in form %}
+        <div class="field_container">
+            {{ field.errors }}
+            {{ field.label_tag }} </br>
+            {{ field }}
+        </div>
+    {% endfor %}
+
+    <input type="submit" value="Enviar" />
+    </form>
+</div>
+
+{% include "advogado/links.html" %}
+
+{% endblock %}

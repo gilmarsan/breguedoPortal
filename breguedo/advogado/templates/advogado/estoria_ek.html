@@ -1,0 +1,30 @@
+{% extends "advogado/base.html" %}
+
+{% load static %}
+
+{% block conteudo %}
+
+<div id="wrapper">
+  <section id="featured">
+    <div class="container">
+      <section id="biografia">
+        <div class="row-fluid">
+          <h1><b style="color: white">Lista de Estórias Disponíveis:</b></h1>
+        </div>
+          {% if estoria_ek_list %}
+              <ol style="color: white">
+              {% for estoria_ek in estoria_ek_list %}
+                  <li><h1><a href="{% url 'estoria_ek_detalhe' estoria_ek.id %}"><b>{{ estoria_ek.titulo }}</b></a></h1></li>
+              {%endfor %}
+               </ol>
+           {% else %}
+                  <h1><b>Nenhuma Estória disponível!</b></h1>
+            {% endif %}
+      </section>
+    </div>
+  </section>
+</div>
+
+{% include "advogado/links.html" %}
+
+{% endblock %}
